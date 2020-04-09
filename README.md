@@ -4,7 +4,7 @@ An Anycubic Trigorilla Pro from a Predator reverse
 Anycubic Trigorilla pro specs and mcu pinout
 
 - 32bit Cortex-M3 MCU (STM32F103ZET6) 8MHz crystal
-- Soldered 5x A4988 stepper drivers configured to 16 microstep (MS all to 3v3)
+- Soldered 5x A4988 stepper drivers configured to 16 microsteps (MS all to 3v3)
 - WIFI slot for ESP-01S
 - Onboard Winbond W25Q16JV 16Mbit SPI Flash
 - Onboard 24C16 I2C 16Kbit EEPROM
@@ -15,7 +15,7 @@ Anycubic Trigorilla pro specs and mcu pinout
 - Second Extruder-Hotend DaughterBoard predisposition
 - Mounted in Anycubic Predator, I3 Mega and ecc with 4 inch Touch LCD
 
-I have recostructed the schematics of this board from my predator, i hape that 
+I have recostructed the schematics of this board from my predator, i hope that 
 in some time is possible to implement a custom firmware for this board without
 change it. The schematics is designed with eagle cad free and is for only for
 study purpose, only the foundamental signals are drawed, and some components
