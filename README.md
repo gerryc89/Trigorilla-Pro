@@ -32,25 +32,25 @@ Jumpers
 
 Stepper controllers and cpu pin cross table
 - X-MOTOR
-    DIR =       PE6
-    STEP =      PE5
-    nENABLE =   PC13
+    * DIR =       PE6
+    * STEP =      PE5
+    * nENABLE =   PC13
 - Y-MOTOR
-    DIR =       PE3
-    STEP =      PE2
-    nENABLE =   PE4
+    * DIR =       PE3
+    * STEP =      PE2
+    * nENABLE =   PE4
 - Z-MOTOR
-    DIR =       PE0
-    STEP =      PB8
-    nENABLE =   PE1
+    * DIR =       PE0
+    * STEP =      PB8
+    * nENABLE =   PE1
 - EXTRUDER-MOTOR
-    DIR =       PB5
-    STEP =      PB4
-    nENABLE =   PB9
+    * DIR =       PB5
+    * STEP =      PB4
+    * nENABLE =   PB9
 - Z2-MOTOR (not used in predator)
-    DIR =       PC6
-    STEP =      PC7
-    nENABLE =   PG8
+    * DIR =       PC6
+    * STEP =      PC7
+    * nENABLE =   PG8
 
 
 Digital Sensors all pull-upped to 5v
@@ -79,19 +79,19 @@ Heaters
 
 Second Extruder-Hotend Headers (no signal conditioning, direct connected to cpu)
 - JP3
-    1-EXT =     PC5     (Extruder STEP?)
-    2-RVO =     PB1     (Extruder DIR?)
-    3-HOT2 =    PG7     (HotEnd control out?)
-    4-COOL2 =   PG6     (HotEnd fan control out?)
-    5-TEMP2 =   PA2     (HotEnd ADC sensor in?)
+    * 1-EXT =     PC5     (Extruder STEP?)
+    * 2-RVO =     PB1     (Extruder DIR?)
+    * 3-HOT2 =    PG7     (HotEnd control out?)
+    * 4-COOL2 =   PG6     (HotEnd fan control out?)
+    * 5-TEMP2 =   PA2     (HotEnd ADC sensor in?)
 - JP6
-    1-GND
-    2-12/24V
-    3-12/24V
-    4-GND
-    5-GND
-    6-3V3
-    7-FILAMENT2 = PA3   (Second filament runout sensor?)
+    * 1-GND
+    * 2-12/24V
+    * 3-12/24V
+    * 4-GND
+    * 5-GND
+    * 6-3V3
+    * 7-FILAMENT2 = PA3   (Second filament runout sensor?)
 
     
 Voltage Alarm, SuperCapacitor and signaling
@@ -103,20 +103,20 @@ Voltage Alarm, SuperCapacitor and signaling
 
 Memory
 - 24C16
-    SCL =     PG0
-    SDA =     PG1    
+    * SCL =     PG0
+    * SDA =     PG1    
 - W25W16JV
-    nCS =     PB12
-    CLK =     PB13
-    DO  =     PB14
-    DI  =     PB15    
+    * nCS =     PB12
+    * CLK =     PB13
+    * DO  =     PB14
+    * DI  =     PB15    
 - SD Card slot and pin header JP2  (all pull-upped to 3v3 except CK)
-    CMD =     PD2
-    CK        PC12
-    D0        PC8
-    D1        PC9
-    D2        PC10
-    D3        PC11
+    * CMD =     PD2
+    * CK        PC12
+    * D0        PC8
+    * D1        PC9
+    * D2        PC10
+    * D3        PC11
     
     
 Wi-Fi ESP01S ESP8266 Module socket J1
