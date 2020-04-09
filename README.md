@@ -1,6 +1,7 @@
 # Trigorilla-Pro
 An Anycubic Trigorilla Pro from a Predator reverse
 
+
 Anycubic Trigorilla pro specs and mcu pinout
 
 - 32bit Cortex-M3 MCU (STM32F103ZET6) 8MHz crystal
@@ -66,9 +67,9 @@ Analog Sensors all pull-upped to 3v3
 
 
 Fans
-- M-FAN =     PD6     (internal motherbnoard for predator)
+- M-FAN =     PD6     (internal motherboard for predator)
 - FAN0 =      PG13    (duct blowers for predator)
-- FAN1 =      PG14    (hotend fanfor predator)
+- FAN1 =      PG14    (hotend fan for predator)
 
 
 Heaters
@@ -136,8 +137,8 @@ orientation
 
 
 USB Serial communication
-- TX =        PA9           (to TX pin of the PL2303)
-- RX =        PA10          (to RX pin of the PL2303)
+- TX =        PA9           (to RX pin of the PL2303)
+- RX =        PA10          (to TX pin of the PL2303)
 
 
 LCD Touch Display connector 39 pin start from X- connector
