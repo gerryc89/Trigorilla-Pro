@@ -20,7 +20,7 @@ I have recostructed the schematics of this board from my predator, i hope that
 in some time is possible to implement a custom firmware for this board without
 change it. The schematics is designed with eagle cad free and is for only for
 study purpose, only the foundamental signals are drawed, and some components
-that i ave selected are incorrect for the pcb, but for the digital wiring sense
+that i have selected are incorrect for the pcb, but for the digital wiring sense
 is ok. The library for the drawing are all included, created from the 
 respectively authors.
 
