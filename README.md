@@ -41,12 +41,12 @@ Stepper controllers and cpu pin cross table
     * nENABLE =   PE4
 - Z-MOTOR
     * DIR =       PE0
-    * STEP =      PB8
+    * STEP =      PB9
     * nENABLE =   PE1
 - EXTRUDER-MOTOR
     * DIR =       PB5
     * STEP =      PB4
-    * nENABLE =   PB9
+    * nENABLE =   PB8
 - Z2-MOTOR (not used in predator)
     * DIR =       PC6
     * STEP =      PC7
