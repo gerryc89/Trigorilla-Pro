@@ -28372,16 +28372,18 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 </net>
 <net name="N$62" class="0">
 <segment>
-<pinref part="IC1" gate="G$1" pin="PB9"/>
-<wire x1="80.01" y1="53.34" x2="80.01" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="U2" gate="G$1" pin="!ENABLE"/>
 <wire x1="-58.42" y1="60.96" x2="-40.64" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="60.96" x2="-33.02" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="60.96" x2="-33.02" y2="66.04" width="0.1524" layer="91"/>
-<wire x1="-33.02" y1="66.04" x2="80.01" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="66.04" x2="79.756" y2="66.04" width="0.1524" layer="91"/>
 <pinref part="R48" gate="G$1" pin="1"/>
+<wire x1="79.756" y1="66.04" x2="80.01" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="-40.64" y1="83.82" x2="-40.64" y2="60.96" width="0.1524" layer="91"/>
 <junction x="-40.64" y="60.96"/>
+<pinref part="IC1" gate="G$1" pin="PB8"/>
+<wire x1="82.55" y1="53.34" x2="82.55" y2="66.04" width="0.1524" layer="91"/>
+<wire x1="82.55" y1="66.04" x2="80.01" y2="66.04" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$63" class="0">
@@ -28521,9 +28523,11 @@ Source: &lt;a href= "http://www.hirose.co.jp/cataloge_hp/e58605370.pdf"&gt;Data 
 <pinref part="U3" gate="G$1" pin="STEP"/>
 <wire x1="-58.42" y1="20.32" x2="-30.48" y2="20.32" width="0.1524" layer="91"/>
 <wire x1="-30.48" y1="20.32" x2="-30.48" y2="63.5" width="0.1524" layer="91"/>
-<wire x1="-30.48" y1="63.5" x2="82.55" y2="63.5" width="0.1524" layer="91"/>
-<pinref part="IC1" gate="G$1" pin="PB8"/>
-<wire x1="82.55" y1="53.34" x2="82.55" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="-30.48" y1="63.5" x2="76.2" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="IC1" gate="G$1" pin="PB9"/>
+<wire x1="76.2" y1="63.5" x2="76.454" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="80.01" y1="53.34" x2="80.01" y2="63.5" width="0.1524" layer="91"/>
+<wire x1="80.01" y1="63.5" x2="76.454" y2="63.5" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$80" class="0">
