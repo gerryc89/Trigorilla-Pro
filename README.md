@@ -130,10 +130,11 @@ Wi-Fi ESP01S ESP8266 Module socket J1
 - 8 TX        PB11
 
 orientation
-|1|2|          CPU
-|3|4|          
-|5|6|
-|7|8|
+
+- |1|2|          CPU
+- |3|4|          
+- |5|6|
+- |7|8|
 
 
 USB Serial communication
