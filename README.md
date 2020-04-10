@@ -62,7 +62,7 @@ Digital Sensors all pull-upped to 5v
 - X- =        PG10
 
 
-Analog Sensors all pull-upped to 3v3
+Analog Sensors all pull-upped to 3v3 with 4k7Ohm resistor
 - E-TEMP =    PA1
 - B-TEMP =    PA0
 
