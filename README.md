@@ -132,10 +132,10 @@ Wi-Fi ESP01S ESP8266 Module socket J1 to USART3
 
 orientation
 
-*|1|2|        =>  CPU
-*|3|4|          
-*|5|6|
-*|7|8|
+* |1|2|        =>  CPU
+* |3|4|          
+* |5|6|
+* |7|8|
 
 
 USB Serial communication    USART1
