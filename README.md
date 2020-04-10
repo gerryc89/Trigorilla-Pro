@@ -16,6 +16,7 @@ Anycubic Trigorilla pro specs and mcu pinout
 - Second Extruder-Hotend DaughterBoard predisposition
 - Mounted in Anycubic Predator, I3 Mega and ecc 
 - Custom touch lcd 3.5 inch 320x480 ILI9488 with TSC2046 spi touch controller
+- can be flashed with st flash loader demonstrator 2.6.0 changing jumpers
 
 I have recostructed the schematics of this board from my predator, i hope that 
 in some time is possible to implement a custom firmware for this board without
@@ -26,7 +27,7 @@ is ok. The library for the drawing are all included, created from the
 respectively authors.
 
 
-Jumpers
+Jumpers for flashing MCU
 - JP1 =         Bootloader, remove and power up for flashing
 - SW1 =         5V From usb or internal psu, is used for flash w/out psu
 
