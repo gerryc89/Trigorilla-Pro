@@ -14,7 +14,8 @@ Anycubic Trigorilla pro specs and mcu pinout
 - USB Serial communication
 - Buzzer, sw controlled internal led
 - Second Extruder-Hotend DaughterBoard predisposition
-- Mounted in Anycubic Predator, I3 Mega and ecc with 4 inch Touch LCD
+- Mounted in Anycubic Predator, I3 Mega and ecc 
+- Custom touch lcd 3.5 inch 320x480 ILI9488 with TSC2046 spi touch controller
 
 I have recostructed the schematics of this board from my predator, i hope that 
 in some time is possible to implement a custom firmware for this board without
@@ -105,12 +106,12 @@ Memory
 - 24C16
     * SCL =     PG0
     * SDA =     PG1    
-- W25W16JV
+- W25W16JV on SPI2 Interface
     * nCS =     PB12
     * CLK =     PB13
     * DO  =     PB14
     * DI  =     PB15    
-- SD Card slot and pin header JP2  (all pull-upped to 3v3 except CK)
+- SD Card slot and pin header JP2  on SDIO
     * CMD =     PD2
     * CK        PC12
     * D0        PC8
@@ -119,66 +120,120 @@ Memory
     * D3        PC11
     
     
-Wi-Fi ESP01S ESP8266 Module socket J1
-- 1 RX =      PB10
+Wi-Fi ESP01S ESP8266 Module socket J1 to USART3
+- 1 RX =      PB10         USART3 TX
 - 2 3V3
 - 3 GND
-- 4 GPIO =    PD12         (reset?)
+- 4 GPIO =    PD12         RESET
 - 5 NC
 - 6 3V3
 - 7 GND
-- 8 TX        PB11
+- 8 TX        PB11         USART3 RX
 
 orientation
 
-- |1|2|          CPU
-- |3|4|          
-- |5|6|
-- |7|8|
+*|1|2|        =>  CPU
+*|3|4|          
+*|5|6|
+*|7|8|
 
 
-USB Serial communication
-- TX =        PA9           (to RX pin of the PL2303)
-- RX =        PA10          (to TX pin of the PL2303)
+USB Serial communication    USART1
+- USART1 TX = PA9           (to RX pin of the PL2303)
+- USART1 RX = PA10          (to TX pin of the PL2303)
 
 
-LCD Touch Display connector 39 pin start from X- connector
+LCD Touch Display connector 39 pin start from X- connector, on FSMC as lcd cont.
 - 1 = 3V3
 - 2 = NC
 - 3 = NC
 - 4 = NC
 - 5 = GND
-- 6 = PD14
-- 7 = PD15
-- 8 = PD0
-- 9 = PD1
-- 10 = PD7
-- 11 = PD11
-- 12 = PD5
-- 13 = PD4
-- 14 = PD13
-- 15 = PE7
-- 16 = PE11
-- 17 = PE12
-- 18 = PE13
-- 19 = PE14
-- 20 = PE15
-- 21 = PD8
-- 22 = PD9
-- 23 = PD10
-- 24 = PB6
-- 25 = PA6
-- 26 = PB7
-- 27 = PA5
-- 28 = PF11
-- 29 = PE8
-- 30 = PE9
-- 31 = PE10
-- 32 = GND
+- 6 = PD14          lcd pin 9 of 40
+- 7 = PD15          lcd pin 10 of 40
+- 8 = PD0           lcd pin 11 of 40
+- 9 = PD1           lcd pin 12 of 40
+- 10 = PD7          lcd pin 4 of 40
+- 11 = PD11         lcd pin 5 of 40
+- 12 = PD5          lcd pin 6 of 40
+- 13 = PD4          lcd pin 7 of 40
+- 14 = PD13         Backlight on
+- 15 = PE7          lcd pin 13 of 40
+- 16 = PE11         lcd pin 17 of 40
+- 17 = PE12         lcd pin 18 of 40
+- 18 = PE13         lcd pin 19 of 40
+- 19 = PE14         lcd pin 20 of 40
+- 20 = PE15         lcd pin 21 of 40
+- 21 = PD8          lcd pin 22 of 40
+- 22 = PD9          lcd pin 23 of 40
+- 23 = PD10         lcd pin 24 of 40
+- 24 = PB6          TSC2046 Touch nIRQ
+- 25 = PA6          TSC2046 Touch DO
+- 26 = PA7          TSC2046 Touch DI
+- 27 = PB7          TSC2046 Touch nCS
+- 28 = PA5          TSC2046 Touch CLK
+- 29 = PF11         lcd pin 8 of 40
+- 30 = PE8          lcd pin 14 of 40
+- 31 = PE9          lcd pin 15 of 40
+- 32 = PE10         lcd pin 16 of 40
 - 33 = GND
 - 34 = GND
-- 35 = 5V
+- 35 = GND
 - 36 = 5V
-- 37 = 3V3
+- 37 = 5V
 - 38 = 3V3
 - 39 = 3V3
+- 40 = 3V3
+
+
+Resistive touch controller TSC2046 on SPI1
+- PB6 = nIRQ
+- PA6 = DO
+- PA7 = DI
+- PB7 = nCS
+- PA5 = CLK
+
+
+LCD 3.5 inch 320x480 ILI9488 controller model FXD035HV20-FPC-A0 on custom board.
+Unfortnately i don't know if this pinout is correct for all digital signals
+ names
+- 1 = GND
+- 2 = 3V3
+- 3 = 3V3
+- 4 = CSX             PD7          FSMC_NE1/FSMC_NCE2
+- 5 = D/CX            PD11         FSMC A16
+- 6 = WRX             PD5          FSMC_NWE
+- 7 = RD              PD4          FSMC_NOE
+- 8 = RESET           PF11         FSMC_NIOS16
+- 9 = DB0             PD14         FSMC_Dx
+- 10 = DB1            PD15         *
+- 11 = DB2            PD0          *
+- 12 = DB3            PD1          *
+- 13 = DB4            PE7          *
+- 14 = DB5            PE8          *
+- 15 = DB6            PE9          *
+- 16 = DB7            PE10         *
+- 17 = DB8            PE11         *
+- 18 = DB9            PE12         *
+- 19 = DB10           PE13         *
+- 20 = DB11           PE14         *
+- 21 = DB12           PE15         *
+- 22 = DB13           PD8          *
+- 23 = DB14           PD9          *
+- 24 = DB15           PD10         *
+- 25 = GND
+- 26 = Y+
+- 27 = Y-
+- 28 = Y-
+- 29 = X+
+- 30 = K
+- 31 = K
+- 32 = K
+- 33 = K
+- 34 = K
+- 35 = K
+- 36 = 3V3
+- 37 = GND
+- 38 = NC
+- 39 = NC
+- 40 = NC
